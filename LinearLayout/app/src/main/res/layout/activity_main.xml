@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Conversor de moeda"
+        android:textSize="28sp" />
+
+
     <EditText
         android:id="@+id/edit_euros"
         android:layout_width="match_parent"
@@ -14,21 +23,43 @@
         android:layout_margin="20dp"
         android:gravity="center"
         android:hint="Insira um valor em euros"
-        android:inputType="number|numberDecimal|numberSigned"/>
+        android:inputType="number|numberDecimal|numberSigned" />
 
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:text="Converter" />
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/button_dolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dolares" />
+
+        <Button
+            android:id="@+id/button_real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Real" />
+
+        <Button
+            android:id="@+id/button_peso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Peso" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/text_dolares"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="50sp"/>
+        android:textSize="50sp" />
 
 
 </LinearLayout>
