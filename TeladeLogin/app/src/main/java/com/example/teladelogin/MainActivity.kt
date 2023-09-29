@@ -1,5 +1,6 @@
 package com.example.teladelogin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,9 +18,15 @@ class MainActivity : AppCompatActivity() {
             val password = binding.editUsername.text.toString().trim()
             if(username.equals("admin") && password.equals("admin")){
                 Toast.makeText(applicationContext,"Login efetuado",Toast.LENGTH_SHORT).show()
+
+                val i = Intent(this,LoginOkActivity::class.java)
+                i.putExtra("username", username)
+                startActivity(i);
+                finish()
             }else{
                 Toast.makeText(applicationContext,"Deu ruim",Toast.LENGTH_SHORT).show()
-
+                startActivity(Intent(this,LoginErradoActivity::class.java))
+                finish()
             }
 
             binding.editUsername.setText("")
